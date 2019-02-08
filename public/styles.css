@@ -4,10 +4,8 @@
     
 }
 
-#page-container {
-    background-image: radial-gradient( rgb(1, 46, 1), black);
-    height: 100%;
-    width: 100%;
+body {
+    background: rgb(69, 69, 206);
 }
 
 /* These media query is for phone device only */
@@ -32,7 +30,6 @@
         padding-right: 10px;
         font-size: 20px;
         font-weight: 100;
-       
     }
 
  }
@@ -67,12 +64,8 @@
         ". index-side-bar index-main-content index-main-content ."
         ". index-footer index-footer index-footer .";
         grid-gap: 10px;
-        margin-top: 20px;
+        
     }
-}
-
-body {
-    background:black;
 }
 
 #header-container {
@@ -83,7 +76,7 @@ body {
     align-items: center;
     height: 100px; 
     width: 100%;
-    border: 2pt solid rgb(7, 36, 7);
+    border: 2pt solid white;
 }
 
 #header {
@@ -120,7 +113,6 @@ body {
     font-size: 15px;
     color: rgb(3, 243, 23);
     font-weight: 800;
-    border: 1px solid rgb(7, 36, 7);
     border-radius: 10px;
     height: 40px;
     width: 200px;
@@ -136,7 +128,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: +1;
+    z-index: 1;
     transition: .7s;
 }
 
@@ -145,10 +137,10 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: linear-gradient( black, rgb(1, 46, 1));
+    background-image: linear-gradient(aqua, rgb(148, 250, 216));
     top: 0;
     left: 0;
-    z-index: +1;
+    z-index: 1;
     transition: .7s;
 }
 
@@ -171,7 +163,7 @@ body {
     color:white;
     font-size: 20px;
     font-weight: 600;
-    border: 2pt solid rgb(7, 36, 7);
+    border: 2pt solid white;
 }
 
 #nav-bar-row {
@@ -186,7 +178,6 @@ body {
    
 }
 
-
 #side-bar {
     grid-area: index-side-bar;
     display: flex;
@@ -196,7 +187,7 @@ body {
     height: auto;
     width: 100%;
     background: black;
-    border: 2pt solid rgb(7, 36, 7);
+    border: 2pt solid white;
 }
 
 #side-bar-title {
@@ -222,15 +213,69 @@ body {
 
 #main-content {
     grid-area: index-main-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
+    background-image: url("./images/townsville.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 100%;
     width: 100%;
-    background: black;
-    color:white;
-    font-weight: 600;
-    border: 2pt solid rgb(7, 36, 7);
+    overflow: hidden;
+    border: 2pt solid white;
+}
+
+#curtain-wrapper {
+    width: 100%;
+    height: 100%;
+}
+        
+.curtain-panel-left, .curtain-panel-right {
+    width: 50%; /* Each panel takes up half the container */
+    height: 100%; /* Used for demo purposes */
+    float: left; /* Makes sure panels are side-by-side 
+    position: absolute; /* Needed to define the z-index */
+    z-index: 2; /* Places the panels in front of the prize */
+    transition: all 1s ease-out; /* Animates the sliding transition */
+}
+
+.curtain-panel-left {
+    background-image: linear-gradient(to right, black, aquamarine);
+    opacity: .7;
+    text-align: right;
+}
+
+.curtain-panel-right {
+    background-image: linear-gradient(to left, rgb(5, 83, 57), aquamarine);
+    opacity: .7;
+    text-align: left;
+}
+
+/* When the checkbox is checked... */
+        
+/* Slide the first panel in */
+.curtain-panel-left {
+    transform: translateX(0);
+}
+          
+/* Slide the second panel in */
+.curtain-panel-right {
+    transform: translateX(0);
+}
+
+input[type=checkbox]:checked ~ .curtain-panel-left {
+    transform: translateX(-100%);
+}
+
+input[type=checkbox]:checked ~ .curtain-panel-right {
+    transform: translateX(100%);
+}
+
+input[type=checkbox] {
+    position: absolute; /* Force the checkbox at the start of the container */
+    cursor: pointer; /* Indicate the curtain is clickable */
+    width: 100%; /* The checkbox is as wide as the component */
+    height: 100%; /* The checkbox is as tall as the component */
+    z-index: 100; /* Make sure the checkbox is on top of everything else */
+    opacity: 0; /* Hide the checkbox */
 }
 
 #footer {
@@ -243,5 +288,5 @@ body {
     background: black;
     color:white;
     font-weight: 600;
-    border: 2pt solid rgb(7, 36, 7);
+    border: 2pt solid white;
 }
