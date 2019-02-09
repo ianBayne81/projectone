@@ -5,7 +5,7 @@
 }
 
 body {
-    background: rgb(69, 69, 206);
+    background: grey;
 }
 
 /* These media query is for phone device only */
@@ -76,7 +76,6 @@ body {
     align-items: center;
     height: 100px; 
     width: 100%;
-    border: 2pt solid white;
 }
 
 #header {
@@ -87,7 +86,6 @@ body {
     font-size: 30px;
     color: white;
     font-weight: 600;
-    background: black;
     height: 100%;
     width: 100%;
 }
@@ -97,7 +95,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: black;
     height: 100%;
     width: 100%;
     padding-bottom: 10px;
@@ -159,11 +156,10 @@ body {
     align-items: center;
     height: 100px;
     width: 100%;
-    background: black;
     color:white;
     font-size: 20px;
     font-weight: 600;
-    border: 2pt solid white;
+    border-bottom: 2pt solid white;
 }
 
 #nav-bar-row {
@@ -175,7 +171,16 @@ body {
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
-   
+}
+
+#nav-bar-row li:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+
+#logout-link {
+    color: white;
+    text-decoration: none;
 }
 
 #side-bar {
@@ -186,8 +191,6 @@ body {
     align-items: center;
     height: auto;
     width: 100%;
-    background: black;
-    border: 2pt solid white;
 }
 
 #side-bar-title {
@@ -238,14 +241,14 @@ body {
 }
 
 .curtain-panel-left {
-    background-image: linear-gradient(to right, black, aquamarine);
+    background-image: linear-gradient(to right, aqua, rgb(172, 240, 240));
     opacity: .7;
     text-align: right;
 }
 
 .curtain-panel-right {
-    background-image: linear-gradient(to left, rgb(5, 83, 57), aquamarine);
-    opacity: .7;
+    background-image: linear-gradient(to left, aqua, rgb(172, 240, 240));
+    opacity: .8;
     text-align: left;
 }
 
@@ -253,20 +256,20 @@ body {
         
 /* Slide the first panel in */
 .curtain-panel-left {
-    transform: translateX(0);
+    transform: translateX(-100%);
 }
           
 /* Slide the second panel in */
 .curtain-panel-right {
-    transform: translateX(0);
+    transform: translateX(100%);
 }
 
 input[type=checkbox]:checked ~ .curtain-panel-left {
-    transform: translateX(-100%);
+    transform: translateX(0);
 }
 
 input[type=checkbox]:checked ~ .curtain-panel-right {
-    transform: translateX(100%);
+    transform: translateX(0);
 }
 
 input[type=checkbox] {
@@ -281,12 +284,8 @@ input[type=checkbox] {
 #footer {
     grid-area: index-footer;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100px;
     width: 100%;
-    background: black;
-    color:white;
-    font-weight: 600;
-    border: 2pt solid white;
+    border-top: 2pt solid white;
 }

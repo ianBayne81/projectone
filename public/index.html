@@ -3,73 +3,28 @@
 <html>
 
 <head>
-    <title>ProjectOne</title>
+    <title>Login-in</title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
+    <link href="login-styles.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <div id="page-container">
 
-        <div id="grid-container">
-
-            <div id="header-container">
-                <div id="header"><p>ProjectOne</p></div>
-                <div id="clock"><!--insert js time here--></div>
-            </div>
-
-            <div id="nav-bar">
-                <ul id="nav-bar-row">
-                    <li>Home</li>
-                    <li>Contact</li> 
-                    <li>About Us</li> 
-                </ul>
-                    
-            </div>
-
-            <div id="side-bar">
-                <div id="side-bar-title">Listed items</div>
-                <div id="side-bar-column-container>">
-                    <li id="side-bar-column">
-                        <ul>Item 1</ul>
-                        <ul>Item 2</ul> 
-                        <ul>Item 3</ul>
-                        <ul>Item 4</ul>
-                        <ul>Item 5</ul> 
-                    </li>
-                </div>
-            </div>
-
-            <div id="main-content">
-                <!-- The component wrapper -->
-                <div id="curtain-wrapper">
-
-                    <!-- The checkbox hack! -->
-                    <input type="checkbox" checked>
-                    
-                    <!-- The left curtain panel -->
-                    <div class="curtain-panel-left">
-                        <h1 id="townsville">VI</h1>
-                    </div> <!-- curtain__panel -->
-                    
-                    <!-- The right curtain panel -->
-                    <div class="curtain-panel-right">
-                        <h1 id="townsville">EW</h1>
-                    </div> <!-- curtain__panel -->
-                    
-                </div> <!-- curtain__wrapper -->
+   <div id="login-container">
+       <div id="login-wrapper">
+            <div><h1 id="login-title">Please login</h1></div>
+            <div><input type="password" id="login-input" placeholder="enter password"></div>
+            <div><button id="login-button">Login</button></div>
+            <div id="contact-div"><a href="" id="contact-link">Contact</a></div> 
             
-            </div>
-
-            <div id="footer">
-                footer 
-            </div>
-
-        </div>
+        </div> 
     </div>
 
-<script src="/scripts/bundle.js"></script>
+
+
+
+<script src="/scripts/index-bundle.js"></script>
 
 </body>
 

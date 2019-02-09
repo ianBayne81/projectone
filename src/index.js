@@ -1,31 +1,17 @@
-import moment from 'moment'
 
-// clock element DOM elements defined 
-const getTime = moment().format("LT") 
-    
-    const clockEl = document.querySelector("#clock")
-    const timeDivEl = document.createElement('div')
-    timeDivEl.classList.add('time-div-element')
-    
-    const timeSpanEl = document.createElement('span')
-    timeSpanEl.classList.add('time-span-element')
-    
-    const timeElPara = document.createElement('p')
-    timeElPara.classList.add('time-element-parargraph')
-    timeElPara.textContent = getTime
+const password = "Tayla"
 
-// render time display DOM 
+document.querySelector("#login-button").addEventListener("click", (e) => { 
 
-const renderTimeDOM = function () {
-    //const now = new Date()
-    //now.toLocaleTimeString()
-    clockEl.innerHTML = ""
-    timeSpanEl.appendChild(timeElPara)
-    timeDivEl.appendChild(timeSpanEl)
-    clockEl.appendChild(timeDivEl)
-}
-setInterval(renderTimeDOM(), 1000)
+    const inputEl = document.querySelector("#login-input")
+    inputEl.textContent = inputEl.text
 
-
+    if (inputEl.value === password) {
+        location.assign('/site.html')
+    } else {
+        alert("Password is incorrect. Please make contact to apply for password, Thank you")
+        inputEl.value = ""
+    }
+})
 
 
