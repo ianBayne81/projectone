@@ -13,12 +13,14 @@ body {
     #grid-container { 
         display: grid;
         grid-template-columns: 3fr,auto;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         "index-header-container index-header-container index-header-container"
         "index-nav-bar index-nav-bar index-nav-bar"
-        "index-side-bar index-main-content index-main-content"
-        "index-side-bar index-main-content index-main-content"
+        "index-side-bar index-side-bar index-side-bar"
+        "index-side-bar index-side-bar index-side-bar"
+        "index-main-content index-main-content index-main-content"
+        "index-main-content index-main-content index-main-content"
         "index-footer index-footer index-footer";
         grid-gap: 10px;
         width: 100%;
@@ -115,38 +117,6 @@ body {
     width: 200px;
     background: black;
     overflow: hidden;
-    cursor: pointer;
-}
-
-.time-span-element:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: .7s;
-}
-
-.time-span-element:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-image: linear-gradient(aqua, rgb(148, 250, 216));
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: .7s;
-}
-
-.time-span-element:hover:before {
-    top: -100%;
-}
-
-.time-span-element:hover:after {
-    top: -100%;
 }
 
 #nav-bar {
@@ -176,6 +146,7 @@ body {
 #nav-bar-row li:hover {
     transform: scale(1.2);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #logout-link {
@@ -212,6 +183,7 @@ body {
     font-size: 20px;
     color: white;
     font-weight: 300;
+    cursor: pointer;
 }
 
 #main-content {

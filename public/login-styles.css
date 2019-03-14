@@ -3,20 +3,25 @@
     padding: 0;
 }
 
-body {
-    background-image: url("./images/background.jpg");
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 #login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
     width: 100%;
 }
+
+@media screen and (min-width: 0px) and (max-width: 750px) {
+
+    #login-container {
+        height: 550px;
+    }
+}
+
 
 #login-wrapper {
     display: flex;
@@ -24,9 +29,6 @@ body {
     justify-content: center;
     align-items: center;
     color: rgb(13, 56, 56);
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 10px;
 }
 
 #login-wrapper div {
@@ -41,6 +43,7 @@ body {
     border: 2px solid rgb(37, 163, 163);
     background: rgb(180, 243, 222);
     text-align: center;
+    opacity: .4;
 }
 
 #login-button {
@@ -52,6 +55,7 @@ body {
     border-radius: 5px;
     border: 2px solid rgb(37, 163, 163);
     background: rgb(180, 243, 222);
+    cursor: pointer;
 }
 
 #login-button:hover {
@@ -63,6 +67,7 @@ body {
     color: black;
     text-decoration: none;
     font-size: 20px;
+    cursor: pointer;
 }
 
 #contact-div:hover {
