@@ -18,7 +18,7 @@
 @media screen and (min-width: 0px) and (max-width: 750px) {
 
     #login-container {
-        height: 550px;
+        height: 100vh;
     }
 }
 
@@ -43,14 +43,14 @@
     border: 2px solid rgb(37, 163, 163);
     background: rgb(180, 243, 222);
     text-align: center;
-    opacity: .4;
+    opacity: .6;
 }
 
 #login-button {
     width: 100px;
     height: 40px;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 600;
     color: rgb(13, 56, 56);
     border-radius: 5px;
     border: 2px solid rgb(37, 163, 163);
@@ -60,17 +60,6 @@
 
 #login-button:hover {
     transform: scale(1.2);
-    font-weight: 300;
+    font-weight: 700;
 }
 
-#contact-link {
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-#contact-div:hover {
-    transform: scale(1.2);
-    text-decoration: underline;
-}

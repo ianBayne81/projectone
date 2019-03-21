@@ -5,14 +5,14 @@
 }
 
 body {
-    background: grey;
+    background: rgb(56, 52, 52);
 }
 
 /* These media query is for phone device only */
 @media screen and (min-width:0px) and (max-width: 540px) {
     #grid-container { 
         display: grid;
-        grid-template-columns: 3fr,auto;
+        grid-template-columns: 3fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         "index-header-container index-header-container index-header-container"
@@ -28,8 +28,8 @@ body {
 
     #nav-bar-row li {
         display: flex;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 7px;
+        padding-right: 7px;
         font-size: 20px;
         font-weight: 100;
     }
@@ -86,7 +86,7 @@ body {
     align-items: center;
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: rgb(167, 61, 79);
     font-weight: 600;
     height: 100%;
     width: 100%;
@@ -188,7 +188,13 @@ body {
 
 #main-content {
     grid-area: index-main-content;
-    background-image: url("./images/townsville.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#curtain-wrapper {
+    background-image: url("./images/tayla.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
@@ -196,11 +202,6 @@ body {
     width: 100%;
     overflow: hidden;
     border: 2pt solid white;
-}
-
-#curtain-wrapper {
-    width: 100%;
-    height: 100%;
 }
         
 .curtain-panel-left, .curtain-panel-right {
@@ -210,18 +211,23 @@ body {
     position: absolute; /* Needed to define the z-index */
     z-index: 2; /* Places the panels in front of the prize */
     transition: all 1s ease-out; /* Animates the sliding transition */
+    color: white;
+    font-weight: 400;
 }
 
 .curtain-panel-left {
-    background-image: linear-gradient(to right, aqua, rgb(172, 240, 240));
-    opacity: .7;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: rgb(167, 61, 79);
+    opacity: .8;
 }
 
 .curtain-panel-right {
-    background-image: linear-gradient(to left, aqua, rgb(172, 240, 240));
+    display: flex;
+    align-items: center;
+    background: rgb(167, 61, 79);
     opacity: .8;
-    text-align: left;
 }
 
 /* When the checkbox is checked... */
