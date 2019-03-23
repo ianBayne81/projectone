@@ -1,5 +1,5 @@
 
-const password = "Tayla"
+const password = "Rebel"
 
 document.querySelector("#login-button").addEventListener("click", (e) => { 
 
